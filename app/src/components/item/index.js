@@ -9,12 +9,12 @@ export default ({title, enterprise, type, location, since, link}) => (
     <div>
       <Card>
         <CardContent>
-          <div style={{float: 'left', maxWidth: '50%'}}>
+          <div style={{float: 'left', maxWidth: '50%', textAlign: 'left'}}>
             <Typography variant="subtitle1" >
               {title}
             </Typography>
             <Typography  color="textSecondary" gutterBottom>
-              {enterprise} - {type}
+              {enterprise} - {type} <Button onClick={() => window.location = link}>More...</Button>
             </Typography>
           </div>
           <div style={{float: 'right', textAlign: 'right'}}>
@@ -26,10 +26,6 @@ export default ({title, enterprise, type, location, since, link}) => (
             </Typography>
           </div>
         </CardContent>
-        <CardActions>
-          <br/>
-          <Button onClick={() => window.location = link}>More</Button>
-        </CardActions>
       </Card>
       <br />
     </div>
